@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Millennium Bank</title>
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+<script src="login.js"></script>
+<h1> Bank </h1>
+<!-- Tab links -->
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event,'Login')">Login</button>
+  <button class="tablinks" onclick="openTab(event,'Register')">Register</button>
+</div>
+<!-- Tab content -->
+<div id="Login" class="tabcontent">
+  <h2>Member Login</h2>
+  <form action="http://localhost:8080/BankManageSystem/Login" method="post">
+    <input type="text" placeholder="Username" name="userName"/><br/>
+    <input type="password" placeholder="Password" name="userPass"/><br/>
+    <input type="submit" value="Login" class="button"/>
+  </form>
+</div>
+<div id="Register" class="tabcontent">
+  <h2>Not a member? Register</h2>  
+  <form action="register" method="post">
+		<input type="radio" id="employee" name="role" value="employee">
+	    <label for="employee">Employee</label>
+		<input type="radio" id="customer" name="role" value="customer">
+	    <label for="customer">Customer</label><br>     
+    First Name<br> <input type="text" name="fName" required/><br/>
+    Last Name<br> <input type="text" name="lName" required/><br/>
+    Email<br> <input type="text" name="email" required/><br/>
+    User Name<br> <input type="text" name="userName" required/><br/>
+    Password<br> <input type="text" name="userPass" required/><br/>
+    <input type="submit" value="Register" class="button"/>
+  </form>
+</div>
+</body>
+</html>

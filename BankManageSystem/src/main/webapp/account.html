@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Millennium Bank</title>
+<link rel="stylesheet" href="account.css">
+</head>
+<body>
+<h1> Bank </h1>
+<script src="login.js"></script>
+<script src="account.js"></script>
+
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'Deposit')">Deposit</button>
+  <button class="tablinks" onclick="openTab(event, 'Withdraw')">Withdraw</button>
+  <button class="tablinks" onclick="openTab(event, 'Transfer')">Transfer</button>
+  <button class="tablinks" onclick="openTab(event, 'SignOut')">Sign Out</button>
+</div>
+
+<div id="Deposit" class="tabcontent">
+  <h3>Enter the amount to deposit?</h3>
+  <form name="service" action="http://localhost:8080/BankManageSystem/deposit" 
+  			onsubmit="return validate()" method="post">
+    <input type="number" placeholder="Amount" name="amount"/><br/>
+    <input type="submit" value="Confirm" name="Confirm" class="button" onclick='btnPressed(this.name);'/>
+    <input type="submit" value="Cancel" name="Cancel" class="button" onclick='btnPressed(this.name);'/>
+  </form>
+</div>
+
+<div id="Withdraw" class="tabcontent">
+  <h3>Enter the amount to withdraw?</h3>
+  <form action="http://localhost:8080/BankManageSystem/withdraw" 
+  			onsubmit="return validate()" method="post">
+    <input type="number" placeholder="Amount" name="amount"/><br/>
+    <input type="submit" value="Confirm" name="Confirm" class="button" onclick='btnPressed(this.name);'/>
+    <input type="submit" value="Cancel" name="Cancel" class="button" onclick='btnPressed(this.name);'/>
+  </form>
+</div>
+
+<div id="Transfer" class="tabcontent">
+  <h3>Transfer money?</h3>
+  <form action="http://localhost:8080/BankManageSystem/transfer" 
+  			onsubmit="return validateForm()" method="post">
+  	Withdraw money from:<br><input type="text" placeholder="Account Number" name="acctNum1"/><br/>
+    Deposit money to:<br><input type="text" placeholder="Account Number" name="acctNum2"/><br/>
+    How much would you like to transfer?<br><input type="number" name="amount"/><br/>
+    <input type="submit" value="Confirm" name="Confirm" class="button"/>
+    <input type="submit" value="Cancel" name="Cancel" class="button"/>
+  </form>
+</div>
+
+<div id="Sign Out" class="tabcontent">
+  <h3>Are you sure you want to log out?</h3>
+  <form action="http://localhost:8080/BankManageSystem/signOut" method="post">
+    <input type="submit" value="Confirm" name="Confirm" class="button"/>
+    <input type="submit" value="Cancel" name="Cancel" class="button"/>
+  </form>
+</div>
+</body>
+</html>
