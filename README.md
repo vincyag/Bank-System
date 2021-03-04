@@ -20,8 +20,9 @@ Ready:
 Future Development:
 1. Transaction records
 2. Employee Authorization
-3. Unit testing
-4. Log file
+3. Multiple accounts
+4. Unit testing
+5. Log file
 
 # Contributor
 Vincy Anna Gheevarughese
