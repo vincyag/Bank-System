@@ -18,8 +18,10 @@ Ready:
 4. Withdraw
 
 Future Development:
-1. Transaction
-2. Employee
+1. Transaction records
+2. Employee Authorization
+3. Unit testing
+4. Log file
 
 # Contributor
 Vincy Anna Gheevarughese
